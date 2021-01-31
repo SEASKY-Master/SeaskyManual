@@ -101,14 +101,15 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. SEASKY-BMI088技术手册</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#id1">2.1. 渲染</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#id2">2.2. 实物</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">2.3. 协议</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#bmi08816">2.3.1. BMI088模块16位寄存器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#uart">2.3.2. UART方式通信协议</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id4">2.3.2.1. 通信要求</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id5">2.3.2.2. 接口协议说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">2.3. Seasky BMI088开源地址</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">2.4. 协议</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bmi08816">2.4.1. BMI088模块16位寄存器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#uart">2.4.2. UART方式通信协议</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id5">2.4.2.1. 通信要求</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">2.4.2.2. 接口协议说明</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#can">2.3.3. CAN方式通信</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#can">2.4.3. CAN方式通信</a></li>
 </ul>
 </li>
 </ul>
@@ -193,9 +194,20 @@
 </div></blockquote>
 </div>
 <div class="section" id="id3">
-<h2><span class="section-number">2.3. </span>协议<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<h2><span class="section-number">2.3. </span>Seasky BMI088开源地址<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<blockquote>
+<div><div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<ul class="simple">
+<li><p>GitHub下载地址: <a class="reference external" href="https://github.com/SEASKY-Master/BMI088_Master">BMI088_Master</a> .</p></li>
+</ul>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="id4">
+<h2><span class="section-number">2.4. </span>协议<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <div class="section" id="bmi08816">
-<h3><span class="section-number">2.3.1. </span>BMI088模块16位寄存器<a class="headerlink" href="#bmi08816" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">2.4.1. </span>BMI088模块16位寄存器<a class="headerlink" href="#bmi08816" title="永久链接至标题">¶</a></h3>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 25%" />
@@ -265,13 +277,13 @@
 </ul>
 </div>
 <div class="section" id="uart">
-<h3><span class="section-number">2.3.2. </span>UART方式通信协议<a class="headerlink" href="#uart" title="永久链接至标题">¶</a></h3>
-<div class="section" id="id4">
-<h4><span class="section-number">2.3.2.1. </span>通信要求<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h4>
+<h3><span class="section-number">2.4.2. </span>UART方式通信协议<a class="headerlink" href="#uart" title="永久链接至标题">¶</a></h3>
+<div class="section" id="id5">
+<h4><span class="section-number">2.4.2.1. </span>通信要求<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h4>
 <p>配置为波特率 <code class="docutils literal notranslate"><span class="pre">115200</span></code>，<code class="docutils literal notranslate"><span class="pre">8</span></code> 位数据位，<code class="docutils literal notranslate"><span class="pre">1</span></code> 位停止位，<code class="docutils literal notranslate"><span class="pre">无</span></code> 硬件流控，<code class="docutils literal notranslate"><span class="pre">无</span></code> 校验位,发送频率 <code class="docutils literal notranslate"><span class="pre">100Hz</span></code> .</p>
 </div>
-<div class="section" id="id5">
-<h4><span class="section-number">2.3.2.2. </span>接口协议说明<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h4>
+<div class="section" id="id6">
+<h4><span class="section-number">2.4.2.2. </span>接口协议说明<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h4>
 <p>SEASKY通信协议-详情见 <code class="docutils literal notranslate"><span class="pre">串口协议文件</span></code></p>
 <ul>
 <li><p>BMI088端发送接口(float数据长度- 10)</p>
@@ -327,8 +339,8 @@
 </li>
 <li><p>发送函数(该模块发送调用函数)</p></li>
 </ul>
-<div class="literal-block-wrapper docutils container" id="id6">
-<div class="code-block-caption"><span class="caption-text">bmi088 usart mode -&gt;send.</span><a class="headerlink" href="#id6" title="永久链接至代码">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id7">
+<div class="code-block-caption"><span class="caption-text">bmi088 usart mode -&gt;send.</span><a class="headerlink" href="#id7" title="永久链接至代码">¶</a></div>
 <div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -416,8 +428,8 @@
 <ul class="simple">
 <li><p>寄存器数据打包函数</p></li>
 </ul>
-<div class="literal-block-wrapper docutils container" id="id7">
-<div class="code-block-caption"><span class="caption-text">seasky通用协议打包函数.</span><a class="headerlink" href="#id7" title="永久链接至代码">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id8">
+<div class="code-block-caption"><span class="caption-text">seasky通用协议打包函数.</span><a class="headerlink" href="#id8" title="永久链接至代码">¶</a></div>
 <div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -437,14 +449,14 @@
 </div>
 </div>
 <div class="section" id="can">
-<h3><span class="section-number">2.3.3. </span>CAN方式通信<a class="headerlink" href="#can" title="永久链接至标题">¶</a></h3>
+<h3><span class="section-number">2.4.3. </span>CAN方式通信<a class="headerlink" href="#can" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
 <li><p>CAN波特率1MHZ、发送频率100Hz</p></li>
 <li><p>协议部分</p></li>
 <li><p>定义共用体变量</p></li>
 </ul>
-<div class="literal-block-wrapper docutils container" id="id8">
-<div class="code-block-caption"><span class="caption-text">float和uint8数据处理.</span><a class="headerlink" href="#id8" title="永久链接至代码">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id9">
+<div class="code-block-caption"><span class="caption-text">float和uint8数据处理.</span><a class="headerlink" href="#id9" title="永久链接至代码">¶</a></div>
 <div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -551,8 +563,8 @@
 </table>
 </li>
 </ul>
-<div class="literal-block-wrapper docutils container" id="id9">
-<div class="code-block-caption"><span class="caption-text">使用can向bmi088发送控制数据.</span><a class="headerlink" href="#id9" title="永久链接至代码">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id10">
+<div class="code-block-caption"><span class="caption-text">使用can向bmi088发送控制数据.</span><a class="headerlink" href="#id10" title="永久链接至代码">¶</a></div>
 <div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -593,8 +605,8 @@
 </div>
 </li>
 <li><p>BMI088模块端发送</p>
-<div class="literal-block-wrapper docutils container" id="id10">
-<div class="code-block-caption"><span class="caption-text">bmi088模块端的can发送函数.</span><a class="headerlink" href="#id10" title="永久链接至代码">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id11">
+<div class="code-block-caption"><span class="caption-text">bmi088模块端的can发送函数.</span><a class="headerlink" href="#id11" title="永久链接至代码">¶</a></div>
 <div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -643,8 +655,8 @@
 </div>
 </li>
 <li><p>BMI088模块端发送函数调用</p>
-<div class="literal-block-wrapper docutils container" id="id11">
-<div class="code-block-caption"><span class="caption-text">bmi088模块端的can发送数据.</span><a class="headerlink" href="#id11" title="永久链接至代码">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id12">
+<div class="code-block-caption"><span class="caption-text">bmi088模块端的can发送数据.</span><a class="headerlink" href="#id12" title="永久链接至代码">¶</a></div>
 <div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -661,8 +673,8 @@
 <li><p>使用端接收示例</p>
 <ul>
 <li><p>可以使用枚举定义如下变量</p>
-<div class="literal-block-wrapper docutils container" id="id12">
-<div class="code-block-caption"><span class="caption-text">bmi088模块端的can发送数据.</span><a class="headerlink" href="#id12" title="永久链接至代码">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id13">
+<div class="code-block-caption"><span class="caption-text">bmi088模块端的can发送数据.</span><a class="headerlink" href="#id13" title="永久链接至代码">¶</a></div>
 <div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -680,8 +692,8 @@
 </li>
 <li><p>结构体</p></li>
 </ul>
-<div class="literal-block-wrapper docutils container" id="id13">
-<div class="code-block-caption"><span class="caption-text">bmi088模块端的can发送数据.</span><a class="headerlink" href="#id13" title="永久链接至代码">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id14">
+<div class="code-block-caption"><span class="caption-text">bmi088模块端的can发送数据.</span><a class="headerlink" href="#id14" title="永久链接至代码">¶</a></div>
 <div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -756,8 +768,8 @@
 </div>
 <ul>
 <li><p>数据解读</p>
-<div class="literal-block-wrapper docutils container" id="id14">
-<div class="code-block-caption"><span class="caption-text">bmi088模块端的can发送数据.</span><a class="headerlink" href="#id14" title="永久链接至代码">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id15">
+<div class="code-block-caption"><span class="caption-text">bmi088模块端的can发送数据.</span><a class="headerlink" href="#id15" title="永久链接至代码">¶</a></div>
 <div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -782,8 +794,8 @@
 </div>
 </li>
 <li><p>对应到具体数据</p>
-<div class="literal-block-wrapper docutils container" id="id15">
-<div class="code-block-caption"><span class="caption-text">can接收中断调用.</span><a class="headerlink" href="#id15" title="永久链接至代码">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id16">
+<div class="code-block-caption"><span class="caption-text">can接收中断调用.</span><a class="headerlink" href="#id16" title="永久链接至代码">¶</a></div>
 <div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -840,8 +852,8 @@
 </pre></div>
 </td></tr></table></div>
 </div>
-<div class="literal-block-wrapper docutils container" id="id16">
-<div class="code-block-caption"><span class="caption-text">can接收中断调用.</span><a class="headerlink" href="#id16" title="永久链接至代码">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id17">
+<div class="code-block-caption"><span class="caption-text">can接收中断调用.</span><a class="headerlink" href="#id17" title="永久链接至代码">¶</a></div>
 <div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
  2
  3
@@ -886,8 +898,8 @@
 </div>
 </li>
 <li><p>接收端发送控制数据(寄存器赋值处理不完整)</p>
-<div class="literal-block-wrapper docutils container" id="id17">
-<div class="code-block-caption"><span class="caption-text">can发送数据.</span><a class="headerlink" href="#id17" title="永久链接至代码">¶</a></div>
+<div class="literal-block-wrapper docutils container" id="id18">
+<div class="code-block-caption"><span class="caption-text">can发送数据.</span><a class="headerlink" href="#id18" title="永久链接至代码">¶</a></div>
 <div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3

@@ -10,12 +10,18 @@ SEASKY-BMI088技术手册
     :align: center
 
 
+
 实物
 ======
 
   .. image:: ./../images/bmi088.jpg
     :width: 800 px
     :align: center
+
+Seasky BMI088开源地址
+===========================================
+
+  .. seealso:: - GitHub下载地址: `BMI088_Master  <https://github.com/SEASKY-Master/BMI088_Master>`_ .
 
 协议
 ====
